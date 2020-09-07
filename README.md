@@ -17,6 +17,7 @@ All analyses are conducted on open-access data. However some repositories requir
 
 
 **Brain Imaging**.  
+
 _UK Biobank:_   
 -- Third party restricted, apply here: https://www.ukbiobank.ac.uk/register-apply/
 
@@ -27,10 +28,32 @@ _ENIGMA:_
 -- Available in the Supplementary data from Schmall et al. 2018 (https://pubmed.ncbi.nlm.nih.gov/27137745/). Also can be found in this repo under "reference_files" directory as "ENIGMA_MDD_thickness_desikan_multiple.csv".  
 
 **Gene Expression**.  
-_Allen Human Brain Atlas:_
+
+_Allen Human Brain Atlas:_.  
 -- Freely available here: https://portal.brain-map.org/.  
 
 _PsychENCODE Brainspan:_.  
+-- Freely available here: http://resource.psychencode.org/.  
+
+_Gandal et al. 2018 patient data:_.  
+-- Freely available here: 
+
+**Single-cell data**.   
+
+_Lake et al. 2018:_.  
+-- Freely available here: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE97942.  
+
+_AHBA MTG:_.  
+-- Freely available here: https://portal.brain-map.org/atlases-and-data/rnaseq.  
+
+**GWAS**.  
+-- Freely available here: https://www.med.unc.edu/pgc/download-results/.  
+
+
+**Derived data fields**  
+-- Available in the Supplementary Information of the published paper. 
+
+
 
 
 
