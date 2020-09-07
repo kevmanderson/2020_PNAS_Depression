@@ -16,12 +16,24 @@ kmanderson38@gmail.com.
 All analyses are conducted on open-access data. However some repositories require third party approval for download. 
 
 
-**Brain Imaging**
+**Brain Imaging**. 
 _UK Biobank:_   
 -- Third party restricted, apply here: https://www.ukbiobank.ac.uk/register-apply/
 
 _Genomics Superstruct Project:_   
 -- Third party restricted, apply here: https://dataverse.harvard.edu/dataverse/GSP
+
+_ENIGMA:_   
+-- Available in the Supplementary data from Schmall et al. 2018 (https://pubmed.ncbi.nlm.nih.gov/27137745/). Also can be found in this repo under "reference_files" directory as "ENIGMA_MDD_thickness_desikan_multiple.csv".  
+
+**Gene Expression**. 
+
+
+
+
+
+
+
 
 
 
