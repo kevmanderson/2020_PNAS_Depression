@@ -8,10 +8,8 @@ Script repository for:
 Anderson KM, Collins MA, Kong R, Fang K, Li J, He T, Chekroud AM, Yeo BTT, Holmes AJ. Convergent molecular, cellular, and cortical neuroimaging signatures of major depressive disorder. _Proceedings of the National Academy of Sciences_ (2020).  
 
 Please contact Kevin Anderson with any questions:  
-kevinanderson@fas.harvard.edu
-kmanderson38@gmail.com
-
-
+kevinanderson@fas.harvard.edu. 
+kmanderson38@gmail.com. 
 
 
 
