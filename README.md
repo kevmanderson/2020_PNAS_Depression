@@ -15,7 +15,8 @@ kmanderson38@gmail.com.
 **Data Availability**
 All analyses are conducted on open-access data. However some repositories require third party approval for download. 
 
-_UK Biobank:_ Third party restricted, apply here: https://www.ukbiobank.ac.uk/register-apply/
+_UK Biobank:_ 
+    Third party restricted, apply here: https://www.ukbiobank.ac.uk/register-apply/
 
 
 
