@@ -27,6 +27,7 @@ _Genomics Superstruct Project:_
 _ENIGMA:_   
 -- Available in the Supplementary data from Schmall et al. 2018 (https://pubmed.ncbi.nlm.nih.gov/27137745/). Also can be found in this repo under "reference_files" directory as "ENIGMA_MDD_thickness_desikan_multiple.csv".  
 
+
 **Gene Expression**.  
 
 _Allen Human Brain Atlas:_.  
@@ -38,6 +39,7 @@ _PsychENCODE Brainspan:_.
 _Gandal et al. 2018 patient data:_.  
 -- Freely available here: 
 
+
 **Single-cell data**.   
 
 _Lake et al. 2018:_.  
@@ -46,11 +48,14 @@ _Lake et al. 2018:_.
 _AHBA MTG:_.  
 -- Freely available here: https://portal.brain-map.org/atlases-and-data/rnaseq.  
 
+
 **GWAS**.  
+
 -- Freely available here: https://www.med.unc.edu/pgc/download-results/.  
 
 
 **Derived data fields**  
+
 -- Available in the Supplementary Information of the published paper. 
 
 
