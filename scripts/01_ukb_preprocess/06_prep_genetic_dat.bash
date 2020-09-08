@@ -73,29 +73,16 @@ ${base_dir}/external/gcta_1.91.1beta/gcta64 --grm ${grm_all} --pca 20 --out ${gr
 
 
 # prsice calculation
-
-gwas_base=${base_dir}/data/ldsc/2019_PGC_UKB_depression_genome_wide.txt
+cd /gpfs/milgram/project/holmes/kma52/mdd_gene_expr/data/prsice/Wray_daner_pgc_mdd_meta_w2_no23andMe_rmUKBB
+gwas_base=/gpfs/milgram/project/holmes/kma52/mdd_gene_expr/data/prsice/Wray_daner_pgc_mdd_meta_w2_no23andMe_rmUKBB/daner_pgc_mdd_meta_w2_no23andMe_rmUKBB
 target=${base_dir}/data/prsice/ukb_cal_chrALL_v2_maf05_hwe1e6_geno1_mind1
 
 ${base_dir}/external/prsice/PRSice_linux \
     --base ${gwas_base} \
     --target ${target} \
-    --thread 1 \
+    --thread 12 \
     --stat OR \
     --binary-target T \
     --fastscore --no-regress --missing CENTER
-
-
-gwas_base=/gpfs/milgram/project/holmes/kma52/ukb_pymood/data/gwas_sumstats/PRSice_PGC_MDD_ex23andme2018.txt
-target=${base_dir}/data/prsice/ukb_cal_chrALL_v2_maf05_hwe1e6_geno1_mind1
-
-${base_dir}/external/prsice/PRSice_linux \
-    --base ${gwas_base} \
-    --target ${target} \
-    --thread 1 \
-    --stat OR \
-    --binary-target T \
-    --fastscore --no-regress --missing CENTER
-
 
 
