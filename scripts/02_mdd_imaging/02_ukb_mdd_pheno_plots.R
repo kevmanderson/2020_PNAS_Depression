@@ -102,22 +102,28 @@ summary(lm(mdd_online_symptom_sum.0.0 ~ mdd_status_2_0_fac + sex_0_0 + age_at_sc
 
 # Step 4: Plot MDD Polygenic risk score by MDD status
 # -------------
-hyde_gwas = read_delim('/gpfs/milgram/project/holmes/kma52/ukb_pymood/data/prsice/PRSice_PGC_MDD_ex23andme2018/PRSice.all.score', delim=' ')
-colnames(hyde_gwas) = gsub('[.]','_', paste0('hyde_', colnames(hyde_gwas)))
-image_df_hyde = merge(x=image_df, y=hyde_gwas, by.x='UKB_ID', by.y='hyde_IID')
-image_df_hyde$hyde_0_100000 = as.numeric(image_df_hyde$hyde_0_100000)
+wray_gwas = read_delim('/gpfs/milgram/project/holmes/kma52/mdd_gene_expr/data/prsice/Wray_daner_pgc_mdd_meta_w2_no23andMe_rmUKBB/PRSice.all.score', delim=' ')
+colnames(wray_gwas) = gsub('[.]','_', paste0('wray_', colnames(wray_gwas)))
+image_df_wray = merge(x=image_df, y=wray_gwas, by.x='UKB_ID', by.y='wray_IID')
+image_df_wray$wray_1 = as.numeric(image_df_wray$wray_1)
 
-freq_plot = paste0(project_dir, '/figures/mdd_by_HydePRS.pdf')
+freq_plot = paste0(project_dir, '/figures/mdd_by_Wray_daner_pgc_mdd_meta_w2_no23andMe_rmUKBB.pdf')
 freq_plot
 CairoPDF(freq_plot, width=2, height=2)
-ggplot(image_df_hyde, aes(x=mdd_status_2_0_fac, y=hyde_0_100000, fill=mdd_status_2_0_fac)) +
+ggplot(image_df_wray, aes(x=mdd_status_2_0_fac, y=wray_1, fill=mdd_status_2_0_fac)) +
     geom_boxplot(fill='#A4A4A4') +
     theme_classic() +
     scale_fill_manual(values=c("#FEFBDE", "#999999", "#E69F00", "#56B4E9")) +
-    scale_y_continuous(limits = c(-2e-4, 2e-4), breaks=seq(-2e-4,2e-4,by=1e-4), expand=c(0,0)) +
+    scale_y_continuous(limits = c(-1e-4, 1e-4), breaks=seq(-1e-4,1e-4,by=.5e-4), expand=c(0,0)) +
     theme(axis.text.x = element_text(color='black'), axis.text.y = element_text(color='black'))
 dev.off()
-summary(lm(hyde_0_100000~ mdd_status_2_0_fac + sex_0_0 + age_at_scan + age_square + age_at_scan*sex_0_0 + age_square*sex_0_0, data=image_df_hyde))
+
+summary(lm(wray_1~ mdd_status_2_0_fac + sex_0_0 + age_at_scan + age_square + age_at_scan*sex_0_0 + age_square*sex_0_0, data=image_df_wray))
+
+gene_pcs = colnames(image_df_wray)[grep('genetic_PC', colnames(image_df_wray))]
+mdd_formula = paste0('wray_1 ~ mdd_status_2_0_fac + sex_0_0 + age_at_scan + age_square + age_at_scan*sex_0_0 + age_square*sex_0_0+', paste0(gene_pcs, collapse='+'))
+summary(lm(mdd_formula, data=image_df_wray))
+
 
 
 
