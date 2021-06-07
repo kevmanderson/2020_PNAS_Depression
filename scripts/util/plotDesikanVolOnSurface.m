@@ -1,8 +1,5 @@
 function plotParcelData(dscalar_template, write_val_file, save_path)
 
-    % dscalar_template = '/gpfs/milgram/project/holmes/kma52/ukb_pymood/ref_files/desikan_atlas_32k.dlabel.nii';
-    % write_val_file = '/gpfs/milgram/project/holmes/kma52/sst_pvalb_nn/data/ahba/tmp/tmp.txt'
-    % save_path = "/gpfs/milgram/project/holmes/kma52/ukb_pymood/analyses/multimodal_mood/figures/mdd_desikan_cohens_d.dscalar.nii"
     addpath('/gpfs/milgram/project/holmes/kma52/sst_pvalb_nn/external/matlab');
     addpath('/gpfs/milgram/project/holmes/kma52/sst_pvalb_nn/external/matlab/gifti-1.6');
 
